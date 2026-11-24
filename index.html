@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Akshita Kunchala | AI & Machine Learning</title>
+  <meta name="description" content="Portfolio of Akshita Kunchala, an AI & ML undergraduate building semantic search, audio analysis, computer vision and full-stack projects.">
+  <meta name="theme-color" content="#1E2140">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top" aria-label="Akshita Kunchala, back to top">AK</a>
+    <nav aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <h1>Akshita Kunchala</h1>
+        <p class="lede">I build AI projects that turn messy inputs (research papers, raw audio, photos) into something a person can search, read or act on.</p>
+        <p class="sub">Final-year B.Tech student in Artificial Intelligence & Machine Learning at Bapatla Engineering College. Open to AI/ML roles.</p>
+        <div class="actions">
+          <a class="btn primary" href="assets/Akshita_Kunchala.docx" download>Download resume</a>
+          <a class="btn" href="#projects">See projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="block">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <div class="p-head">
+          <h3>ResearchGap AI</h3>
+          <p class="tag">Research-support workspace</p>
+        </div>
+        <div class="p-body">
+          <p>A local-first workspace that helps you explore candidate research gaps across a collection of academic papers you upload. It combines PDF ingestion, semantic retrieval and AI-assisted synthesis in one interface.</p>
+          <ul>
+            <li>JWT sign-in with protected workspace access.</li>
+            <li>PDFs are embedded locally and searched with PostgreSQL and pgvector.</li>
+            <li>Candidate gaps are grounded in the uploaded papers, with saved history and downloadable reports.</li>
+            <li>Separate Overview, Paper Library, Gap Analysis and History screens in a dark interface.</li>
+          </ul>
+          <p class="note">Gaps are candidate findings, not proof of novelty, and need human verification. Scanned or image-only PDFs (OCR) are not supported.</p>
+          <ul class="chips" aria-label="Technology"><li>FastAPI</li><li>PostgreSQL</li><li>pgvector</li><li>Sentence Transformers</li><li>Docker</li><li>JWT</li></ul>
+          <a class="repo" href="https://github.com/Akshita-Kunchala/ResearchGap-AI.git" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-head">
+          <h3>SonicMiner AI</h3>
+          <p class="tag">Audio feature extraction and analysis</p>
+        </div>
+        <div class="p-body">
+          <p>An interactive platform for uploading audio files, inspecting them one by one or in batches, comparing how similar they are, and exporting the features as structured data for machine-learning experiments.</p>
+          <ul>
+            <li>Extracts 39 features per file: six core spectral and energy measures, 13 MFCC, 12 Chroma, 7 Spectral Contrast and tempo, plus duration and sample rate.</li>
+            <li>Shows waveforms and MFCC, Chroma and Spectral Contrast heatmaps.</li>
+            <li>Exports CSV for all files, selected files, selected features, or a single result.</li>
+            <li>Compares one song against many, or any two files, using their feature representations.</li>
+            <li>Optional Gemini explanations of what the measurements mean.</li>
+          </ul>
+          <ul class="chips" aria-label="Technology"><li>Python</li><li>Librosa</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>Google Gemini</li></ul>
+          <a class="repo" href="https://github.com/Akshita-Kunchala/SonicMiner-AI.git" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-head">
+          <h3>StyleAI</h3>
+          <p class="tag">StyleSense, a generative-AI fashion recommender. Hackathon project.</p>
+        </div>
+        <div class="p-body">
+          <p>Analyses a photo for skin tone and generates personal fashion and beauty suggestions, then shows the outfit ideas as generated images.</p>
+          <ul>
+            <li>Korean-inspired skin-tone analysis from an uploaded photo.</li>
+            <li>Outfit, makeup and hairstyle suggestions shaped by occasion, location, budget and style, with a preference quiz.</li>
+            <li>AI-generated outfit imagery and virtual try-on.</li>
+            <li>Text and voice chat, shopping links and Pinterest inspiration.</li>
+          </ul>
+          <ul class="chips" aria-label="Technology"><li>OpenCV</li><li>Google Gemini</li><li>Stable Diffusion</li></ul>
+          <a class="repo" href="https://github.com/Akshita-Kunchala/StyleAI.git" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-head">
+          <h3>Inkwell</h3>
+          <p class="tag">MERN stack blogging platform</p>
+        </div>
+        <div class="p-body">
+          <p>Anyone can browse public posts; registered users can write, edit and delete their own. Server-side ownership checks and authentication protect user-specific actions.</p>
+          <ul>
+            <li>Registration and login with JWT; passwords hashed with bcrypt.</li>
+            <li>Time-limited, hashed password-reset tokens.</li>
+            <li>Edit and delete limited to the post's owner on the server.</li>
+            <li>Title and tag search with pagination.</li>
+            <li>REST API split into routes, controllers, models and middleware; React app with public and protected routes.</li>
+          </ul>
+          <p class="note">Planned next: comments, a rich-text editor and direct image uploads.</p>
+          <ul class="chips" aria-label="Technology"><li>MongoDB</li><li>Express.js</li><li>React</li><li>Node.js</li><li>Tailwind CSS</li><li>Vite</li><li>Axios</li></ul>
+          <a class="repo" href="https://github.com/Akshita-Kunchala/InkWell.git" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-head">
+          <h3>Audio Feature Extraction</h3>
+          <p class="tag">Python notebook in Google Colab</p>
+        </div>
+        <div class="p-body">
+          <p>A lightweight notebook that extracts common audio descriptors from samples stored in Google Drive and produces visual outputs and CSV files. It was the starting point for SonicMiner AI.</p>
+          <ul>
+            <li>13 MFCC coefficients, Chroma features and Spectral Contrast.</li>
+            <li>Waveform and spectrogram plots.</li>
+            <li>CSV export for one sample or all processed samples.</li>
+          </ul>
+          <ul class="chips" aria-label="Technology"><li>Python</li><li>Google Colab</li><li>Librosa</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li></ul>
+          <a class="repo" href="https://github.com/Akshita-Kunchala/Audio-feature-extraction.git" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="experience" class="block">
+      <h2>Experience</h2>
+      <div class="rows">
+        <div class="row">
+          <div class="when">2025</div>
+          <div>
+            <h3>MERN Stack Web Development Intern</h3>
+            <p class="org">Codtech IT Solutions Private Limited</p>
+            <p>Six-week hands-on program in MongoDB, Express.js, React.js, Node.js and JavaScript. Connected frontend, backend, database and REST API layers, and practised CRUD operations, reusable components and Git-based workflows.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2025</div>
+          <div>
+            <h3>AI Intern (Training-Based)</h3>
+            <p class="org">SkillDzire Technologies, Remote</p>
+            <p>Trained on AI, Machine Learning, Deep Learning and NLP fundamentals through practical demonstrations of real-world model applications, working with Python-based tools.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2026</div>
+          <div>
+            <h3>Co-ordinator, Technical Quiz Events</h3>
+            <p class="org">NeuroSpark & Bectagon 2K26</p>
+            <p>Coordinated technical quizzes at college technical events and worked with teams to keep them running smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="block">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>Python, Java, C, SQL, JavaScript</dd></div>
+        <div><dt>AI and ML</dt><dd>Machine Learning fundamentals, Generative AI, OpenCV, Librosa, Sentence Transformers, Gemini API</dd></div>
+        <div><dt>Backend and data</dt><dd>FastAPI, Node.js, Express.js, REST APIs, JWT authentication, PostgreSQL, pgvector, MongoDB, MySQL</dd></div>
+        <div><dt>Frontend</dt><dd>React, HTML, Tailwind CSS, Vite, Streamlit</dd></div>
+        <div><dt>Tools</dt><dd>NumPy, Pandas, Matplotlib, PIL, Docker, Git and GitHub, Google Colab</dd></div>
+      </dl>
+
+      <h2 class="second">Education and certifications</h2>
+      <div class="rows">
+        <div class="row">
+          <div class="when">2023 – 2027</div>
+          <div>
+            <h3>B.Tech, Artificial Intelligence and Machine Learning</h3>
+            <p class="org">Bapatla Engineering College, Bapatla. CGPA 8.88</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">Certificates</div>
+          <div>
+            <ul class="plain">
+              <li>AWS Cloud Practitioner, GeeksforGeeks (2026)</li>
+              <li>Python Programming, GeeksforGeeks (2026)</li>
+              <li>Digital Application Fundamentals, NASSCOM (2026)</li>
+              <li>Generative AI, Google Cloud (2024)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">Languages</div>
+          <div><p>Telugu (native), English (professional)</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="block contact">
+      <h2>Contact</h2>
+      <p>I'm looking for an AI or machine-learning role where I can keep building. The quickest way to reach me is email.</p>
+      <p class="links">
+        <a href="mailto:kunchalaakshita@gmail.com">kunchalaakshita@gmail.com</a>
+        <a href="https://www.linkedin.com/in/akshita-kunchala" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Akshita-Kunchala" target="_blank" rel="noopener">GitHub</a>
+        <a href="assets/Akshita_Kunchala_Resume.docx" download>Resume (.docx)</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Akshita Kunchala. Bapatla, Andhra Pradesh, India.</p>
+  </footer>
+
+</body>
+</html>
